@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/tvOutput"
-        android:layout_width="105dp"
-        android:layout_height="46dp"
+        android:layout_width="378dp"
+        android:layout_height="619dp"
         android:text="@string/tvOutputText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

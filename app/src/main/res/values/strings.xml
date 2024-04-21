@@ -2,4 +2,6 @@
     <string name="app_name">Lab4_AsyncDataLoader</string>
     <string name="tvOutputText">Output result</string>
     <string name="btnDataLoaderText">Load data</string>
+    <string name="data_loaded">Loaded data:\n</string>
+    <string name="loading_data">Loading data…</string>
 </resources>

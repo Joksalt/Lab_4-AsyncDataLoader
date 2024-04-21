@@ -5,6 +5,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.lab4_asyncdataloader.utilities.AsyncDataLoader;
+import com.example.lab4_asyncdataloader.utilities.Constants;
+
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvOutput;
@@ -22,6 +25,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void btnClickLoadData(){
-        tvOutput.setText("hello world");
+        this.tvOutput.setText(getText(R.string.loading_data));
+        getDataByAsyncTask();
+    }
+
+    public void getDataByAsyncTask(){
+        new AsyncDataLoader() {
+            @Override
+            public void onPostExecute(String result) {
+                tvOutput.setText(getString(R.string.data_loaded) + result);
+            }
+            }.execute(Constants.ECBEUROPA_API_URL);
     }
 }
