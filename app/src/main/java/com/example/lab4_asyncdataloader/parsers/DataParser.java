@@ -32,7 +32,7 @@ public class DataParser {
 
                 String currencyName = rateNode.getAttribute("currency");
                 String currencyRate = rateNode.getAttribute("rate");
-                result += (String.format("Currency name %s, rate %s \n", currencyName, currencyRate));
+                result += (String.format("%s - %s \n", currencyName, currencyRate));
             }
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
